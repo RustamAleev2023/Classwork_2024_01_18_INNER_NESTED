@@ -6,9 +6,12 @@ public class Main {
     public static void main(String[] args) {
         VirtualCollection<String> collection = new VirtualCollection<>();
         collection.add("Привет");
-        collection.add("Привет");
-        collection.add("Привет");
-        collection.add("Привет");
+        collection.add("шаг");
+        collection.add("и");
+        collection.add("весь");
+        collection.add("Мир!");
+        collection.print();
+        System.out.println("Второй элемент: " + collection.get(1));
     }
 }
 
@@ -21,7 +24,7 @@ class VirtualCollection<T extends Object> {
 
     public void print() {
         for (T t : array) {
-            System.out.println(t + " ");
+            System.out.println(t);
         }
     }
 
