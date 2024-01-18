@@ -9,8 +9,8 @@ public class Main {
         System.out.println("=====================================");
 
         TempleClass<String> templeClass2 = new TempleClass<>("Hello", "World");
-        templeClass2.add(templeClass2.o1, templeClass2.o2);
         templeClass2.compare(templeClass2.o1, templeClass2.o2);
+        templeClass2.add(templeClass2.o1, templeClass2.o2);
         System.out.println("=====================================");
 
         TempleClass<Double> templeClass3 = new TempleClass<>(1.0, 2.2);
@@ -34,7 +34,7 @@ public class Main {
 
         public void compare(T o1, T o2) {
             if (o1 == o2) {
-                System.out.println("Are same");
+                System.out.println("They are same");
             } else {
                 System.out.println("They are not same");
             }
@@ -43,10 +43,8 @@ public class Main {
         public void add(T o1, T o2) {
             if (o1.getClass() == Integer.class) {
                 System.out.println((Integer) o1 + (Integer) o2);
-            } else if (o1.getClass() == String.class) {
-                System.out.println(o1 + " " + o2);
             } else {
-                System.out.println("Такие объекты нельзя сложить");
+                System.out.println(o1 + " " + o2);
             }
         }
 
